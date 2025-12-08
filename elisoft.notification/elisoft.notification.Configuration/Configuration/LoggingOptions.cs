@@ -1,4 +1,4 @@
-﻿namespace elisoft.notification.Core.Configuration
+﻿namespace elisoft.notification.Configuration.Configuration
 {
     public class LoggingOptions
     {

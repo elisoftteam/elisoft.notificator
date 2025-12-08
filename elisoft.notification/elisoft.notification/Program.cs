@@ -11,7 +11,7 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 var logger = app.Services.GetRequiredService<ILogger<Program>>();
-logger.LogInformation("START APLIKACJI: raz dwa trzy zmieniam tory");
+logger.LogInformation("test");
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();

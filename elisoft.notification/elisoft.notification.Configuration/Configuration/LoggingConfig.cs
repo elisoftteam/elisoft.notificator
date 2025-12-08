@@ -1,14 +1,13 @@
 ﻿using System;
 using System.IO;
-using elisoft.notification.Core.Configuration;
+using elisoft.notification.Configuration.Configuration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Events;
 
-
-namespace elisoft.notification.Infrastructure.Configuration
+namespace elisoft.notification.Configuration.Configuration
 {
     public class LoggingConfig
     {
