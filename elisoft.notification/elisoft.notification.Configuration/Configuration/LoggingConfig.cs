@@ -15,21 +15,10 @@ namespace elisoft.notification.Configuration.Configuration
 
         public static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
-            var loggingOptions = new LoggingOptions();
-            configuration.Bind("Logging", loggingOptions); 
 
-            string logDirectory = loggingOptions.File.LogsDirectory;
-            string logPath = Path.Combine(logDirectory, ApplicationName, $"{ApplicationName}.txt");
 
             Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Information()
-                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-                .Enrich.FromLogContext()
-                .WriteTo.Console()
-                .WriteTo.File(
-                    path: logPath,
-                    outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"
-                )
+           .ReadFrom.Configuration(configuration)
                 .CreateLogger();
 
             services.AddLogging(loggingBuilder =>
