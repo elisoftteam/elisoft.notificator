@@ -2,9 +2,8 @@
 
 POST {{elisoft.notification_HostAddress}}/api/Notification
 Content-Type: application/json
+X-API-KEY: XTd7wZYLSHbcdDRXPsxyVGeV8KfrU0JQ
 
 {
-  "message": "test api"
+  "message": "test"
 }
-
-###

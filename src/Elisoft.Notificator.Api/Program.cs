@@ -1,4 +1,5 @@
-using elisoft.notification.Infrastructure.Dependencies;
+using Elisoft.Notificator.Infrastructure.Dependencies;
+using Elisoft.Notification.Api.Middleware;
 using Serilog;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,15 +11,13 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 
 var app = builder.Build();
-var logger = app.Services.GetRequiredService<ILogger<Program>>();
-logger.LogInformation("test");
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+  app.MapOpenApi();
 }
 
 app.UseHttpsRedirection();
-
+app.UseMiddleware<ApiKeyMiddleware>();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();

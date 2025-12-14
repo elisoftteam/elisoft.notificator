@@ -13,9 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\elisoft.notification.Configuration\elisoft.notification.Configuration.csproj" />
-    <ProjectReference Include="..\elisoft.notification.Core\elisoft.notification.Infrastructure.csproj" />
-    <ProjectReference Include="..\elisoft.notification.Infrastructure\elisoft.notification.Slack.csproj" />
+    <ProjectReference Include="..\Elisoft.Notificator.Configuration\Elisoft.Notificator.Configuration.csproj" />
+    <ProjectReference Include="..\Elisoft.Notificator.Infrastructure\Elisoft.Notificator.Infrastructure.csproj" />
+    <ProjectReference Include="..\Elisoft.Notificator.Slack\Elisoft.Notificator.Slack.csproj" />
   </ItemGroup>
 
 </Project>
