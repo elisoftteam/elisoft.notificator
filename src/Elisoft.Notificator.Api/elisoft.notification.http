@@ -1,9 +1,0 @@
-@elisoft.notification_HostAddress = http://localhost:5258
-
-POST {{elisoft.notification_HostAddress}}/api/Notification
-Content-Type: application/json
-X-API-KEY: XTd7wZYLSHbcdDRXPsxyVGeV8KfrU0JQ
-
-{
-  "message": "test"
-}
