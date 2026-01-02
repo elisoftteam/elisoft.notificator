@@ -8,7 +8,7 @@ X-API-KEY:
   "channel": "Slack",
   "payload": {
     "webhookUrl": "",
-    "channelName": "",
-    "message": "test webhook url"
+    "channelName": "#notificator",
+    "message": "test"
   }
 }

@@ -1,9 +1,8 @@
 ﻿using Elisoft.Notificator.Core.Requests;
-using Elisoft.Notificator.Slack.Services;
 using Microsoft.Extensions.Logging;
 using Paramore.Brighter;
-using Serilog.Core;
 using System.Text.Json;
+using Elisoft.Slack;
 
 namespace Elisoft.Notificator.Core.Handlers
 {
