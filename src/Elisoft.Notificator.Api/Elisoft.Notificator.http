@@ -2,7 +2,7 @@
 
 POST {{elisoft.notification_HostAddress}}api/Notification/send
 Content-Type: application/json
-X-API-KEY: 
+X-API-KEY:
 
 {
   "channel": "Slack",

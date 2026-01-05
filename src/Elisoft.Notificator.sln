@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 18
-VisualStudioVersion = 18.1.11312.151 d18.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elisoft.Notificator.Api", "Elisoft.Notificator.Api\Elisoft.Notificator.Api.csproj", "{6D4E8242-F578-48D4-BA3C-DB893126D952}"
 EndProject

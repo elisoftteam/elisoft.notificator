@@ -18,7 +18,7 @@ namespace Elisoft.Notificator.Infrastructure.Dependencies
             services.AddScoped<IRequestFactory, RequestFactory>();
             services.AddScoped<INotificationService, NotificationService>();
             services.AddHttpClient<ISlackNotificator, SlackNotificator>();
-            services.AddScoped<INotificationDtoFactory, NotificationDtoFactory>();
+            services.AddScoped<IMessageModelFactory, MessageModelFactory>();
             services.AddBrighter()
                   .AutoFromAssemblies(new[] { typeof(SlackNotificationRequestHandler).Assembly });
             return services;
