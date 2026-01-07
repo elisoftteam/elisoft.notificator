@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace Elisoft.Notificator.Core.Models
 {
-    public class NotificationDto
+    public class Notification
     {
         public NotificationEnumChannel Channel { get; set; }
         public JsonElement Payload { get; set; }
