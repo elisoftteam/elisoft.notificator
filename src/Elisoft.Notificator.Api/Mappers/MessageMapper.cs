@@ -1,13 +1,14 @@
 ﻿using Elisoft.Notificator.Core.Enums;
 using Elisoft.Notificator.Core.Models;
 using System.Text.Json;
+using Elisoft.Notificator.Api.Contracts;
 
-namespace Elisoft.Notificator.Core.Mappers
+namespace Elisoft.Notificator.Api.Mappers
 {
 
-    public class MessageModelMapper : IMessageModelMapper
+    public class MessageMapper : IMessageMapper
     {
-        public Notification MapToNotification(MessageModel message)
+        public Notification MapToNotification(Message message)
         {
             if (message == null) throw new ArgumentException("Body cannot be empty.");
 

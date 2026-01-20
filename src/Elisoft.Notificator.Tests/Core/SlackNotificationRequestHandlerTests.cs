@@ -48,7 +48,6 @@ namespace Elisoft.Notificator.Tests.Core
             // Assert
             A.CallTo(() => _slackNotificatorFake.SendMessageAsync(
                     command.WebhookUrl,
-                    command.ChannelName,
                     command.Message))
              .MustHaveHappenedOnceExactly();
 
@@ -63,7 +62,6 @@ namespace Elisoft.Notificator.Tests.Core
             var expectedException = new HttpRequestException("Slack API unavailable");
 
             A.CallTo(() => _slackNotificatorFake.SendMessageAsync(
-                    A<string>._,
                     A<string>._,
                     A<string>._))
              .Throws(expectedException);

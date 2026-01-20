@@ -7,8 +7,8 @@ namespace Elisoft.Notificator.Core.Requests
     public SlackNotificationRequest() : base(Guid.NewGuid())
     {
     }
-    public string WebhookUrl { get; set; }
-    public string ChannelName { get; set; }
+        public string WebhookUrl { get; set; }
+
     public string Message { get; set; } = string.Empty;
   }
 }

@@ -19,9 +19,9 @@ namespace Elisoft.Notificator.Core.Handlers
 
     public override async Task<SlackNotificationRequest> HandleAsync(SlackNotificationRequest command, CancellationToken cancellationToken = default)
     {
-      _logger.LogInformation($"Sent to slack. Channel name: {command.ChannelName}");
+      _logger.LogInformation($"Sent to slack.");
 
-      await _slackNotificator.SendMessageAsync(command.WebhookUrl, command.ChannelName, command.Message);
+      await _slackNotificator.SendMessageAsync(command.WebhookUrl, command.Message);
       return await base.HandleAsync(command, cancellationToken);
     }
   }

@@ -1,10 +1,12 @@
 using Elisoft.Notificator.Infrastructure.Dependencies;
 using Elisoft.Notificator.Api.Middleware;
+using Elisoft.Notificator.Api.Mappers;
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
+builder.Services.AddScoped<IMessageMapper, MessageMapper>();
 
 builder.Services.AddInfrastructure(builder.Configuration);
 
@@ -20,3 +22,5 @@ app.UseMiddleware<ApiKeyMiddleware>();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
+
+public partial class Program { };

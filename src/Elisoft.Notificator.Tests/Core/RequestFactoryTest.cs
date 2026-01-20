@@ -79,7 +79,6 @@ namespace Elisoft.Notificator.Tests.Core
             // Assert
             var slackRequest = result.ShouldBeOfType<SlackNotificationRequest>();
             slackRequest.WebhookUrl.ShouldBe(expectedUrl);
-            slackRequest.ChannelName.ShouldBe(expectedChannelName);
             slackRequest.Message.ShouldBe(expectedMessage);
         }
 

@@ -1,7 +1,8 @@
-﻿using Elisoft.Notificator.Core.Mappers;
-using Elisoft.Notificator.Core.Models;
+﻿using Elisoft.Notificator.Core.Models;
 using Elisoft.Notificator.Core.Services;
 using Microsoft.AspNetCore.Mvc;
+using Elisoft.Notificator.Api.Mappers;
+using Elisoft.Notificator.Api.Contracts;
 
 namespace Elisoft.Notificator.Api.Controllers
 {
@@ -10,18 +11,18 @@ namespace Elisoft.Notificator.Api.Controllers
     public class NotificationController : ControllerBase
     {
         private readonly INotificationService _notificationService;
-        private readonly IMessageModelMapper _messageMapper;
+        private readonly IMessageMapper _messageMapper;
 
         public NotificationController(
             INotificationService notificationService,
-            IMessageModelMapper messageMapper)
+            IMessageMapper messageMapper)
         {
             _notificationService = notificationService;
             _messageMapper = messageMapper;
         }
 
         [HttpPost("send")]
-        public async Task<IActionResult> SendNotification([FromBody] MessageModel message)
+        public async Task<IActionResult> SendNotification([FromBody] Message message)
         {
             try
             {

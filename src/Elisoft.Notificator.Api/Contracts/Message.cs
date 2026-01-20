@@ -1,8 +1,8 @@
 ﻿using System.Text.Json;
 
-namespace Elisoft.Notificator.Core.Models
+namespace Elisoft.Notificator.Api.Contracts
 {
-  public class MessageModel
+  public class Message
   {
     public string Channel { get; set; }
     public JsonElement Payload { get; set; }
