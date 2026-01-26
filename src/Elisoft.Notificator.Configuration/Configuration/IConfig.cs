@@ -8,8 +8,11 @@ namespace Elisoft.Notificator.Configuration.Configuration
 {
   public interface IConfig
   {
-    string SlackWebhookUrl { get; }
     string LogsDirectory { get; }
     string ApiKey { get; }
+    
+    string TwilioAccountSid { get; }
+    string TwilioAuthToken { get; }
+    string TwilioFromNumber { get; }
   }
 }

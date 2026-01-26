@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Paramore.Brighter.Extensions.DependencyInjection;
 using Elisoft.Slack;
+using Elisoft.Notificator.Twilio.Services;
 
 
 namespace Elisoft.Notificator.Infrastructure.Dependencies
@@ -19,8 +20,13 @@ namespace Elisoft.Notificator.Infrastructure.Dependencies
             services.AddScoped<IRequestFactory, RequestFactory>();
             services.AddScoped<INotificationService, NotificationService>();
             services.AddHttpClient<ISlackNotificator, SlackNotificator>();
+            services.AddHttpClient<ITwilioNotificator, TwilioNotificator>();
             services.AddBrighter()
-                  .AutoFromAssemblies(new[] { typeof(SlackNotificationRequestHandler).Assembly });
+                .AutoFromAssemblies(new[] {
+                    typeof(SlackNotificationRequestHandler).Assembly,
+                    typeof(TwilioNotificationRequestHandler).Assembly
+                    
+                });
             return services;
         }
     }
